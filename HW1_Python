@@ -1,0 +1,48 @@
+# Task 1
+
+def secondConversion(seconds):
+  days = seconds//86400
+  remainder1 = seconds%(86400) #dayseconds = 60*60*24
+  hours = remainder1//(3600)
+  remainder2 = remainder1%(3600)
+  minutes = remainder2//(60)
+  remainder3 = remainder2%(60)
+  print('There are',days, 'day(s)', hours, 'hour(s)', minutes, 'minute(s)', remainder3, 'second(s) in', seconds, 'seconds.')
+
+q1 = 1000000
+secondConversion(q1)
+
+q2 = 4000
+secondConversion(q2)
+
+# 7,625,597,484,987 in class
+q3 = 7625597484987
+secondConversion(q3)
+
+
+# Task 2
+
+def gradeConversion(): 
+  score = int(input('Enter your grade: '))
+  if score >= 93:
+    print('A')
+  elif score >= 90:
+    print('A-')
+  elif score >= 87:
+    print('B+')
+  elif score >= 83:
+    print('B')
+  elif score >= 80:
+    print('B-')
+  elif score >= 77:
+    print('C+')
+  elif score >= 73:
+    print('C')
+  elif score >= 70:
+    print('C-')
+  elif score >= 65:
+    print('D')
+  else:
+    print('F')
+
+gradeConversion()
