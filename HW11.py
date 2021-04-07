@@ -1,3 +1,6 @@
+# The variables in these objects are (mostly) all going to be private
+
+
 class Person:
 
     def __init__(self, name, gender, age):
@@ -64,4 +67,23 @@ class Manager(Person):
         return self.__role
 
 
+class Client(Person):
 
+    def __init__(self, name, gender, age, client_id, date_started):
+        Person.__init__(self, name, gender, age)
+        self.__client_id = client_id
+        self.__date_started = date_started
+
+    def set_client_id(self, client_id):
+        self.__client_id = client_id
+
+    def set_date_started(self, date_started):
+        self.__date_started = date_started
+
+    def get_client_id(self):
+        return self.__client_id
+
+    def get_date_started(self):
+        return self.__date_started
+
+# END-----------------------------------------------------------
