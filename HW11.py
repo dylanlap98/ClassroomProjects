@@ -3,7 +3,7 @@
 
 class Person:
 
-    def __init__(self, name, gender, age):
+    def __init__(self, name='', gender='', age=0):
         self.__name = name
         self.__gender = gender
         self.__age = age
@@ -29,7 +29,7 @@ class Person:
 
 class Employee(Person):
 
-    def __init__(self, name, gender, age, employee_id, company, salary):
+    def __init__(self, name, gender, age, employee_id='123456', company='', salary=0):
         Person.__init__(self, name, gender, age)
         self.__employee_id = employee_id
         self.__company = company
@@ -54,10 +54,10 @@ class Employee(Person):
         return self.__salary
 
 
-class Manager(Person):
+class Manager(Employee):
 
-    def __init__(self, name, gender, age, role):
-        Person.__init__(self, name, gender, age)
+    def __init__(self, name, gender, age, employee_id, company, salary, role=''):
+        Employee.__init__(self, name, gender, age, employee_id, company, salary)
         self.__role = role
 
     def set_role(self, role):
@@ -69,7 +69,7 @@ class Manager(Person):
 
 class Client(Person):
 
-    def __init__(self, name, gender, age, client_id, date_started):
+    def __init__(self, name, gender, age, client_id='123456', date_started='January 1, 1900'):
         Person.__init__(self, name, gender, age)
         self.__client_id = client_id
         self.__date_started = date_started
