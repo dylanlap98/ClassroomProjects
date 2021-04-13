@@ -17,7 +17,17 @@ def permutations_calc(n, r):
     return numerator/denominator
 
 
-#print(permutations_calc(6,1))
+print(permutations_calc(9,3))
+
+
+def r_combinations(n, r):
+    numerator = permutations_calc(n, r)
+    denominator = math.factorial(r)
+    return numerator / denominator
+
+# question may be formulated as: 7 choose 5?
+#print(r_combinations(7, 5))
+print(r_combinations(9, 3))
 
 
 # Assuming that all years have 365 days and all birthdays occur with equal probability, how large must n be so that
@@ -37,6 +47,7 @@ def birthday_problem(target):
             break
     print(n)
 
-print(birthday_problem(.9))
+
+#print(birthday_problem(.5))
 
 
