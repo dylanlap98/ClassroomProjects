@@ -17,7 +17,7 @@ def permutations_calc(n, r):
     return numerator/denominator
 
 
-print(permutations_calc(9,3))
+#print(permutations_calc(9,3))
 
 
 def r_combinations(n, r):
@@ -26,9 +26,34 @@ def r_combinations(n, r):
     return numerator / denominator
 
 # question may be formulated as: 7 choose 5?
-#print(r_combinations(7, 5))
-print(r_combinations(9, 3))
+print(r_combinations(4, 1))
+#print(r_combinations(9, 3))
+#print(r_combinations(10, 3))
+#print(r_combinations(11, 5))
 
+#print(r_combinations(5,3) * r_combinations(7,2))
+print(r_combinations(12,5) - r_combinations(7,5))
+#print(r_combinations(13, 6) - r_combinations(10, 3) - r_combinations(11, 4) - r_combinations(11, 4))
+
+
+# Prime Number Calculator
+def is_prime(num):
+    # If given number > 1
+    if num > 1:
+        # Iterate from 2 to n / 2
+        for i in range(2, int(num / 2) + 1):
+            # If num is divisible by any number between
+            # 2 and n / 2, it's not prime
+            if (num % i) == 0:
+                print(num, "is not a prime number")
+                break
+        else:
+            print(num, "is a prime number")
+    else:
+        print(num, "is not a prime number")
+
+
+# is_prime(11)
 
 # Assuming that all years have 365 days and all birthdays occur with equal probability, how large must n be so that
 # in any randomly chosen group of n people, the probability that two or more have the same birthday is at least
